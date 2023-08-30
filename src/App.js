@@ -44,12 +44,8 @@ function App() {
     if (pcChoix === choix) {
       alert("Vous etes execo avec l'ordinateur !");
       console.log("Vous etes execo avec l'ordinateur !");
-    }else if((pcChoix === "rock" && choix === "paper")){
+    }else if((pcChoix === "rock" && choix === "paper") || (pcChoix === "paper" && choix === "scissor") || (pcChoix === "scissor" && choix === "rock")){
      alert("Vous avez gagné contre l'ordinateur");
-    }else if((pcChoix === "paper" && choix === "scissor")){
-      alert("Vous avez gagné contre l'ordinateur");
-    }else if((pcChoix === "scissor" && choix === "rock")){
-      alert("Vous avez gagné contre l'ordinateur");
     } else {
       // alert("Vous avez perdu contre l'ordinateur !");
       alert("Vous avez perdu contre l'ordinateur !");
@@ -172,7 +168,7 @@ function App() {
         <div className="w-[450px] h-[1px] bg-slate-600"></div>
         <div className="gap-2 flex flex-row justify-between">
           <div
-            className="w-[200px] focus:ring focus:ring-green-600 active:bg-green-600 h-[200px] border-1 shadow-sm cursor-pointer"
+            className="w-[200px] focus:ring focus:ring-green-600 hover:bg-green-600 active:bg-green-600 h-[200px] border-1 shadow-sm cursor-pointer"
             onClick={(e) => {
               setChoix("rock");
             }}
@@ -196,7 +192,7 @@ function App() {
             </svg>
           </div>
           <div
-            className="w-[200px] h-[200px] focus:ring focus:ring-green-600 active:bg-green-600 border-1 shadow-sm cursor-pointer"
+            className="w-[200px] h-[200px] focus:ring focus:ring-green-600 hover:bg-green-600 active:bg-green-600 border-1 shadow-sm cursor-pointer"
             onClick={(e) => {
               setChoix("paper");
             }}
@@ -212,7 +208,7 @@ function App() {
             </svg>
           </div>
           <div
-            className="w-[200px] h-[200px] focus:ring focus:ring-green-600 active:bg-green-600 border-1 shadow-sm cursor-pointer"
+            className="w-[200px] h-[200px] focus:ring focus:ring-green-600 hover:bg-green-600 active:bg-green-600 border-1 shadow-sm cursor-pointer"
             onClick={(e) => {
               setChoix("scissor");
             }}
